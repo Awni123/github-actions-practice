@@ -1,0 +1,19 @@
+#Workflow
+#should have a name
+name: hello
+
+#this On tells when this workflow run like on merge or the push/pull or want to mannual trigger this like workflow_dispatch
+on: 
+  workflow_dispatch
+
+#Jobs tells what the workflow should do , there can be one or more jobs can be, jobs is an object so needs indentation
+# should be inside the workflow
+jobs:
+  #1st job
+  say-hello:
+    #creates an emperhmal container with ubuntu running
+    runs-on: ubuntu-latest
+    #that empheral container will have steps to execute, hence name those steps and use run. these runs have commands
+    steps:
+      - name: say hello to everyone
+        run: echo "hello dosto"
